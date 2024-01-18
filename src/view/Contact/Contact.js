@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 
 export default function Contact() {
 
@@ -23,7 +24,10 @@ export default function Contact() {
   };
 
   return (
+
+    
     <center >
+      <Navbar/>
       <h1>This is Counter</h1>
       <div className="container m-auto mt-5 h-50 center">
         <div className="col-sm-6 mb-3 mb-sm-0">

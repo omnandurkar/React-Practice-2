@@ -10,6 +10,7 @@ import Home from './view/Home/Home'
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Contact from './view/Contact/Contact'
+import Form from './view/Form/Form';
 
 
 
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
+  {
+    path: "/form",
+    element: <Form/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
