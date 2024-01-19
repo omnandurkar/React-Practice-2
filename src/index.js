@@ -4,13 +4,14 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './view/Home/Home'
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Contact from './view/Contact/Contact'
 import Form from './view/Form/Form';
+import Login from './view/Login/Login';
 
 
 
@@ -35,7 +36,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/form",
-    element: <Form/>
+    element: <Form/>,
+  },
+
+  {
+    path: "/login",
+    element: <Login/>,
   }
 ]);
 
