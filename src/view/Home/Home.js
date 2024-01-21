@@ -9,8 +9,6 @@ export default function Home() {
     <>
     <Navbar/>
     <h1>This Is Home Page</h1>
-    
-    
     </>
   )
 }

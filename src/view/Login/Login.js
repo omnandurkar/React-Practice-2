@@ -1,35 +1,79 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 
-export default function Login() {
+
+function LoginForm() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [rememberMe, setRememberMe] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Create a user object with form data
+        const user = {
+            email,
+            password,
+            rememberMe,
+        };
+
+        // Retrieve existing users from local storage or initialize an empty array
+        const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Add the new user to the array
+        existingUsers.push(user);
+
+        // Store the updated array back in local storage
+        localStorage.setItem('users', JSON.stringify(existingUsers));
+
+        // Reset form fields
+        setEmail('');
+        setPassword('');
+        setRememberMe(false);
+    };
+
     return (
         <>
-        
-        <Navbar/>
-        
-        <div className='container my-5 border p-5 rounded-3 bg-primary-subtle '>
-
-            <form>
-                <div className="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1"/>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-
-        </div>
-        
-        
-        
+            <Navbar />
+            <div className='container my-5 border p-5 rounded-3 bg-primary-subtle shadow border-primary'>
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                        <input
+                            type="password"
+                            className="form-control"
+                            id="exampleInputPassword1"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-3 form-check">
+                        <input
+                            type="checkbox"
+                            className="form-check-input"
+                            id="exampleCheck1"
+                            checked={rememberMe}
+                            onChange={() => setRememberMe(!rememberMe)}
+                        />
+                        <label className="form-check-label" htmlFor="exampleCheck1">Remember me on this device</label>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </>
-    )
+    );
 }
+
+export default LoginForm;
