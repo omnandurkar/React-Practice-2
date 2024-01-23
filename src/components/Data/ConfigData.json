@@ -1,0 +1,30 @@
+[
+    {
+        "img": "https://raw.githubusercontent.com/roadtocode4u/static-data/main/course-headers/icp.png",
+        "name": "Internship Guarantee Classroom Program 2.0",
+        "info": "Learn Fullstack Development and Become Internship Ready in Just 6 Months 🚀",
+        "img2": "https://roadtocode.org/static/media/ico-calendar.18872b1ad2d1883903319c903b2b5ea2.svg",
+        "starttime": "Starting from 22nd January (final date)",
+        "price": "₹ 9,999 /-",
+        "detail": "All fees will be refunded if you don't get internship within 6 months of course completion."
+    },
+
+    {
+        "img": "https://raw.githubusercontent.com/roadtocode4u/static-data/main/course-headers/icp.png",
+        "name": "Internship Cohort Program 8.0",
+        "info": "Learn Fullstack Development and Become Internship Ready in Just 4 Months 🚀",
+        "img2": "https://roadtocode.org/static/media/ico-calendar.18872b1ad2d1883903319c903b2b5ea2.svg",
+        "starttime": "Starting from 22nd January (final date)",
+        "price": "₹ 1999 /-",
+        "detail": "🐣 Early Bird Offer: Enroll before 15th February and get course at just ₹1499/-"
+    },
+    {
+        "img": "https://raw.githubusercontent.com/roadtocode4u/static-data/main/course-headers/c.png",
+        "name": "C Programming",
+        "info": "Learn C Programming from Scratch and Kickstart your career in Computer Science",
+        "img2": "https://roadtocode.org/static/media/ico-calendar.18872b1ad2d1883903319c903b2b5ea2.svg",
+        "starttime": "Starting from 22nd January (final date)",
+        "price": "₹ 999 /-",
+        "detail": "🦉 Early Bird Offer: Enroll before 5th February and get course at just ₹749/-"
+    }
+]

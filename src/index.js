@@ -12,6 +12,7 @@ import Footer from './components/Footer/Footer';
 import Contact from './view/Contact/Contact'
 import Form from './view/Form/Form';
 import Login from './view/Login/Login';
+import Map from './view/Map/Map';
 
 
 
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login/>,
+  },
+
+  {
+    path: "/map",
+    element: <Map/>
   }
 ]);
 

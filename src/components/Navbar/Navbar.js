@@ -33,7 +33,7 @@ export default function Navbar() {
                     <Link className='dropdown-item' to = "/login">Login</Link>
                   </li>
                   <li><hr className="dropdown-divider"/></li>
-                  <li><a className="dropdown-item" href="#">Something else here</a></li>
+                  <li><Link className="dropdown-item" to="/map">Map</Link></li>
                 </ul>
               </li>
               <li className="nav-item">
