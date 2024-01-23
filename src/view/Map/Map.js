@@ -1,11 +1,13 @@
 import React from 'react'
 import CardPage from '../../components/CardPage/CardPage'
 import ConfigData from '../../components/Data/ConfigData.json'
+import Navbar from '../../components/Navbar/Navbar'
 
 export default function Map() {
     console.log(ConfigData);
   return (
     <>
+    <Navbar/>
     <div className='d-flex flex-row justify-content-around'>
         {
           ConfigData.map((data, index) => {
