@@ -14,6 +14,7 @@ import Form from './view/Form/Form';
 import Login from './view/Login/Login';
 import Map from './view/Map/Map';
 import Posts from './view/Posts/Posts';
+import ReadPost from './view/ReadPost/ReadPost';
 
 
 
@@ -48,12 +49,17 @@ const router = createBrowserRouter([
 
   {
     path: "/map",
-    element: <Map/>
+    element: <Map/>,
   },
 
   {
     path: "/posts",
-    element: <Posts/>
+    element: <Posts/>,
+  },
+
+  {
+    path:"/post/read/:id",
+    element: <ReadPost/>
   }
 
 ]);
