@@ -13,6 +13,7 @@ import Contact from './view/Contact/Contact'
 import Form from './view/Form/Form';
 import Login from './view/Login/Login';
 import Map from './view/Map/Map';
+import Posts from './view/Posts/Posts';
 
 
 
@@ -48,7 +49,13 @@ const router = createBrowserRouter([
   {
     path: "/map",
     element: <Map/>
+  },
+
+  {
+    path: "/posts",
+    element: <Posts/>
   }
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
